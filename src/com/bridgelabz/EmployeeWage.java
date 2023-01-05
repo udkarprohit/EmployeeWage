@@ -11,16 +11,30 @@ public class EmployeeWage {
         int ran = (int)( Math.random() * 10 )% 3;
         int dWage = 0;
         //System.out.println(ran);
-        if(ran == 0)
-        {
-            System.out.println("Employee is Present");
-            dWage = WAGE_PER_HOUR * FULL_DAY;
-        }else if(ran == 1){
-            System.out.println("Employee is Absent");
-        } else {
-            System.out.println("Employee is Part time");
-            dWage = WAGE_PER_HOUR * PART_TIME_HOUR;
+        switch (ran) {
+            case 1:
+                System.out.println("Employee is Present");
+                dWage = WAGE_PER_HOUR * FULL_DAY;
+                break;
+            case 2:
+                System.out.println("Employee is Part time");
+                dWage = WAGE_PER_HOUR * PART_TIME_HOUR;
+                break;
+            default:
+                System.out.println("Employee is Absent");
         }
+
+
+//        if(ran == 0)
+//        {
+//            System.out.println("Employee is Present");
+//            dWage = WAGE_PER_HOUR * FULL_DAY;
+//        }else if(ran == 1){
+//            System.out.println("Employee is Absent");
+//        } else {
+//            System.out.println("Employee is Part time");
+//            dWage = WAGE_PER_HOUR * PART_TIME_HOUR;
+//        }
         System.out.println("Employee Wage per day : " + dWage);
     }
 }
