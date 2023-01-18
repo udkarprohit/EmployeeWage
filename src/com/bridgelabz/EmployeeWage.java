@@ -1,16 +1,15 @@
 package com.bridgelabz;
 
 public class EmployeeWage {
-    //constant variables
+
     static final int WAGE_PER_HOUR = 20;
     static final int FULL_DAY_HOUR = 12;
     static final int PART_TIME_HOUR = 7;
     static final int WORKING_DAYS_PER_MONTH = 20;
     static final int WORKING_HOURS_PER_MONTH = 100;
 
-    public static void main(String[] args) {
+    static void DaiLyWages() {
 
-        System.out.println("Welcome to Employee Wage");
         int dayCount = 1;
         int workingHrs = 0;
         while (dayCount <= WORKING_DAYS_PER_MONTH && workingHrs < WORKING_HOURS_PER_MONTH) {
@@ -35,5 +34,12 @@ public class EmployeeWage {
             System.out.println("working hrs => " + workingHrs);
             dayCount++;
         }
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("Welcome to Employee Wage");
+        //calling DaiLyWages() method
+        DaiLyWages();
     }
 }
